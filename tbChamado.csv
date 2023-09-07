@@ -12,5 +12,5 @@ ID,titulo,descricao,especialidadeID,data_abertura,data_encerramento,prioridadeID
 11,Problema com a impressora a laser,A impressora a laser está apresentando problemas ao imprimir documentos.,3,2023-08-11,2023-08-12,5,1,6,1,6,6
 12,Aplicativo travando ao abrir arquivos grandes,O aplicativo fecha inesperadamente ao tentar abrir arquivos grandes.,1,2023-08-12,2023-08-13,2,2,7,2,7,7
 13,Solicitação de redefinição de senha de email,Esqueci minha senha de email e gostaria de solicitar uma redefinição.,4,2023-08-13,2023-08-14,3,3,8,3,8,8
-14,Erro ao acessar a VPN corporativa,Estou recebendo um erro ao tentar acessar a VPN da empresa.,2,2023-08-14,2023-08-15,4,4,9,4,9,6
-15,Dispositivo móvel não está sincronizando emails,Meu dispositivo móvel não está sincronizando meus emails corporativos corretamente.,3,2023-08-15,2023-08-16,1,1,10,5,10,7
+14,Erro ao acessar a VPN corporativa,Estou recebendo um erro ao tentar acessar a VPN da empresa.,2,2023-08-14,2023-08-15,4,4,9,1,9,6
+15,Dispositivo móvel não está sincronizando emails,Meu dispositivo móvel não está sincronizando meus emails corporativos corretamente.,3,2023-08-15,2023-08-16,1,1,10,2,10,7

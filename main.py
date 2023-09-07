@@ -334,8 +334,8 @@ for chamado in tbChamado:
             chamado['titulo'],
             chamado['descricao'],
             chamado['especialidadeID'],
-            chamado['data_abertura'].strftime('%Y-%m-%d'),
-            chamado['data_encerramento'].strftime('%Y-%m-%d'),
+            chamado['data_abertura'],
+            chamado['data_encerramento'],
             chamado['prioridadeID'],
             chamado['statusID'],
             chamado['computadorID'],
@@ -365,7 +365,7 @@ for computador in tbComputador:
             computador['modelo'],
             computador['numero_serie'],
             computador['SO_ID'],
-            computador['data_aquisicao'].strftime('%Y-%m-%d'),
+            computador['data_aquisicao'],
             computador['departamentoID'],
             computador['usuarioID']
         ))
@@ -615,7 +615,7 @@ async def get_chamados_sql():
 def get_computadores_from_db():
     conn = sqlite3.connect('chamados.db')
     cursor = conn.cursor()
-    cursor.execute('SELECT tbComputador.ID as computadorID, marca, modelo, numero_serie, SO, data_aquisicao, departamento, nome_usuario FROM tbChamado JOIN tbEspecialidade ON tbChamado.especialidadeID = tbEspecialidade.ID JOIN tbPrioridade ON tbChamado.prioridadeID = tbPrioridade.ID JOIN tbStatus ON tbChamado.statusID = tbStatus.ID JOIN tbComputador ON tbChamado.computadorID = tbComputador.ID JOIN tbDepartamento ON tbChamado.departamentoID = tbDepartamento.ID JOIN tbUsuario ON tbChamado.usuarioID = tbUsuario.ID JOIN tbSO ON tbComputador.SO_ID = tbSO.ID')
+    cursor.execute('SELECT tbComputador.ID as computadorID, marca, modelo, numero_serie, SO, data_aquisicao, departamento, nome_usuario FROM tbComputador JOIN tbSO ON tbComputador.SO_ID = tbSO.ID JOIN tbDepartamento ON tbComputador.departamentoID = tbDepartamento.ID JOIN tbUsuario ON tbComputador.usuarioID = tbUsuario.ID')
     computador = cursor.fetchall()
     conn.close()
     return computador
